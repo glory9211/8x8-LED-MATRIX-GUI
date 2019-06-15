@@ -3,7 +3,7 @@ A simple tkinter Led GUI for generating C++ code to drive a single Max 7219 Led 
 
 By either Selecting LED's or Writing text
 
-## Getting Started
+## &nbsp; Getting Started
 Clone the Repository to your local machine
 ``` 
 Navigate to dist\8x8 Matrix GUI\
@@ -14,7 +14,7 @@ Then Locate the file 8x8 Matrix GUI.exe
 Run 8x8 Matrix GUI.exe 
 ```
 
-### Prerequisites
+### &nbsp; Prerequisites
 
 You will Require the Arduino IDE to run the code.
 
@@ -28,7 +28,9 @@ You can setup the Arduino UNO by following the tutorial on
  ```
  https://www.arduino.cc/en/Guide/ArduinoUno
  ```
-## Arduino Pin configuration
+ Also Install the ``` LedControl ``` Library
+ 
+## &nbsp; Arduino Pin configuration
 
 The pins are configured as
 
@@ -39,7 +41,7 @@ int CLK_PIN = 10;      // clock pin
 ```
 You can change these in the beginnig of the code
 
-## Using the GUI
+## &nbsp; Using the GUI
 
 The GUI has 2 Tabs.
 
@@ -47,7 +49,7 @@ Matrix Tab  --> Design the custom patterns easily
 
 Text Tab    --> Write text and Choose the Delay to show the it on the LED
 
-### Important Note
+### &nbsp;Important Note
 
 The text is diplayed as one char each (not implemented scrolling feature yet)
 The space between words is shown by
@@ -73,7 +75,7 @@ The End of text is displayed as
 *        |       *            *     |            *
 ******************            ********************
 ```
-### Recipe
+### &nbsp;Recipe
 The project is using the modules
 
 ```
@@ -82,7 +84,7 @@ pyperclip
 ```
 And for making the executable
 ``` py2installer ```  is used.
-## Acknowledgments
+## &nbsp; Acknowledgments
 The code for the Arduino UNO is acquired from different online resources
 
 For more fun you can visit
