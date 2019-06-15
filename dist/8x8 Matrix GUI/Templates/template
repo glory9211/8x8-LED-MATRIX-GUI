@@ -1,0 +1,44 @@
+ /* GUI created by M.Shoaib UR Rehman (https://github.com/glory9211) */
+ /* ==================== USAGE GUIDE =============================== */
+ /* The Gui has generated the full code for you.
+    To add a pattern paste the generated patten array in the var 'SPRITE'*/
+
+
+#include <LedControl.h>
+
+const int DIN_PIN = 8;
+const int CS_PIN = 9;
+const int CLK_PIN = 10;
+
+const byte SPRITE[][8] = {
+
+
+};
+
+const int SPRITE_LEN = sizeof(SPRITE)/8;
+
+LedControl display = LedControl(DIN_PIN, CLK_PIN, CS_PIN);
+
+void setup() {
+  display.clearDisplay(0);
+  display.shutdown(0, false);
+  display.setIntensity(0, 5);
+}
+
+void displayImage(const byte* image) {
+  for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+      display.setLed(0, i, j, bitRead(image[i], 7 - j));
+    }
+  }
+}
+
+int i = 0;
+
+void loop() {
+  displayImage(SPRITE[i]);
+  if (++i >= SPRITE_LEN ) {
+    i = 0;
+  }
+  delay(333);
+}
